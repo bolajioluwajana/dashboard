@@ -1,0 +1,40 @@
+.header{
+    margin-left: 350px;
+    color: lightblue;
+    font-size: 50px;
+}
+
+.row{
+    margin-left: 350px;
+}
+
+.email-label{
+    font-size: 20px;
+    font-weight: 100;
+    margin-top: 15px;
+}
+
+.password-label{
+    font-size: 20px;
+    font-weight: 200;
+}
+
+.form-control{
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #000000;
+    outline:none;
+    box-shadow:none;
+    width: 250px;
+  }
+
+  @media only screen and (max-width: 600px) {
+    .row,.header{
+      margin-left: 80px;
+     
+   }
+ } 
+
+ .btn{
+     margin-top: 10px;
+ }

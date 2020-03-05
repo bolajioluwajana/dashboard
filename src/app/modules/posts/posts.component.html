@@ -1,0 +1,34 @@
+
+
+
+<mat-drawer-container>
+   <div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="20px" class="graph-cards">
+ 
+    <mat-card fxFlex="50" class="post">
+            <h1 class="notes-header"> Share your notes here</h1>
+
+        <input type="text" placeholder="Your name"  name="name" id="inputFieldbox" [(ngModel)]="fieldData.name">
+       <input type="text" placeholder="Department" name="department" id="inputFieldbox" [(ngModel)]="fieldData.department" >
+       <textarea type="text" placeholder="Message" name="message" value="" id="inputField3" [(ngModel)]="fieldData.message" ></textarea>
+       <button  class="btn btn-primary"(click)="getInput()">Post</button>
+   </mat-card> 
+   </div>
+
+
+
+
+
+    
+
+   <mat-card  fxFlex="100" *ngIf= "hiddenList" class="inputField"  >
+        <ul *ngFor= "let input of inputField; index as i">
+                
+                   <li>{{input.name}}</li> 
+                    <li>{{input.department}}</li>
+                    <li>{{input.message}}</li>
+                
+        <button  class="btn btn-primary" type="button" (click)="removeList(i)">Delete</button>
+       </ul>
+   </mat-card>
+   </mat-drawer-container>
+   <app-footer></app-footer>
